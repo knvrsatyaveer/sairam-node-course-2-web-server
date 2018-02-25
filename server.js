@@ -23,10 +23,12 @@ app.use((req,resp,next) =>{
     // resp.render('maintenance');
 });
 
+/*
 app.use((req,resp,next) =>{
    resp.render('maintenance');
 
 });
+*/
 
 
 hbs.registerPartials(__dirname +'/views/partials');
@@ -56,6 +58,12 @@ app.get('/about',(req,resp) =>{
     resp.render('about.hbs',{
         pageTitle : 'About Page',
         currentYear : new Date().getFullYear()
+    });
+});
+
+app.get('/projects',(req,resp) =>{
+    resp.render('projects.hbs',{
+        pageTitle : 'projects Page',
     });
 });
 
